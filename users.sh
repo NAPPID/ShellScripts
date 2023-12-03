@@ -1,7 +1,7 @@
 
 #!/bin/bash
 USER_NAME=$1
-if [ $# -gt 0]
+if [ $# -gt 0 ]
 then
 cat /etc/passwd | grep -Ew $USER_NAME > /dev/null
 if [ $? -eq 0 ]
