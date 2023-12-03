@@ -17,5 +17,5 @@ else
 	echo "user $USER_NAME created"
 fi	
 else
-	echo "Please enter some input string"
+	echo "Please enter some input string insted of empty"
 fi
