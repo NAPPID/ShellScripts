@@ -11,7 +11,7 @@ then
 			then
 				echo "User $USER_NAME is already created"
 			else
-				useradd $USER_NAME --shell /bin/bash
+				useradd $USER_NAME --shell /bin/bash -d /home/$USER_NAME -m
 				SPECIAL_CHAR=$(echo "!@#$%^&*?()+-" | fold -1 | shuf | head -1)
 				USER_PSD="Indian${RANDOM}${SPECIAL_CHAR}"
 				echo "$USER_NAME:$USER_PSD" | sudo chpasswd
