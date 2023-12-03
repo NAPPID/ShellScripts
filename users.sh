@@ -1,8 +1,11 @@
 
 #!/bin/bash
-USER_NAME=$1
+#USER_NAME=$1
 if [ $# -gt 0 ]
 then
+for USER in $@
+do
+USER_NAME=$USER
 cat /etc/passwd | grep -Ew $USER_NAME > /dev/null
 if [ $? -eq 0 ]
 then
@@ -16,6 +19,7 @@ else
 	passwd -e $USER_NAME
 	echo "user $USER_NAME created"
 fi	
+done
 else
 	echo "Please enter some input string insted of empty"
 fi
