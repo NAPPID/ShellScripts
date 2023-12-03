@@ -16,7 +16,7 @@ then
 				USER_PSD="Indian${RANDOM}${SPECIAL_CHAR}"
 				echo "$USER_NAME:$USER_PSD" | sudo chpasswd
 				echo "$USER_NAME Temporary password is $USER_PSD"
-				passwd -e $USER_NAME
+				passwd -e $USER_NAME > /dev/null
 				echo "user $USER_NAME created"
 			fi	
 	done
